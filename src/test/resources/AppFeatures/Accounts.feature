@@ -1,9 +1,9 @@
 Feature: Account Page Feature
 
-  Background: 
+  Background:
     Given user has already logged on into system
       | username             | password |
-      | sumanth@vcnrtech.com |    123456 |
+      | sumanth@vcnrtech.com | 123456   |
 
   Scenario: Account page title
     Given user is in account page
@@ -13,9 +13,10 @@ Feature: Account Page Feature
   Scenario: Account page check sections
     Given user is in account page
     Then user gets account section
-      | Order history and details |
-      | My credit slips           |
-      | My addresses              |
-      | My personal information   |
-      | My wishlists              |
-    And accounts section count should be 5
+      | ORDER HISTORY AND DETAILS |
+      | MY CREDIT SLIPS           |
+      | MY ADDRESSES              |
+      | MY PERSONAL INFORMATION   |
+      | MY WISHLISTS              |
+      | Home                      |
+    And accounts section count should be 6

@@ -3,6 +3,7 @@ package stepdefinition;
 import com.pages.AccountsPage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
+import com.qa.util.ElementUtil;
 import com.sun.source.tree.AssertTree;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -37,16 +38,20 @@ public class AccountPageSteps {
 
 	@Then("user gets account section")
 	public void user_gets_account_section(DataTable sectionsTable) {
-		List<String> expAccountSectionList = sectionsTable.asList();  //From Feature file
-		List<String> actAccountSectionList = accountsPage.getAccountsPageSectionList(); //From getElementsMethods
-		Assert.assertTrue(expAccountSectionList.containsAll(actAccountSectionList));
+        //From Feature file
+        List<String> expAccountSectionList = sectionsTable.asList();
+        System.out.println(expAccountSectionList);
 
+        //From getElementsMethods
+		List<String> actAccountSectionList = accountsPage.getAccountsPageSectionList();
+		System.out.println(actAccountSectionList);
+
+		Assert.assertTrue(expAccountSectionList.containsAll(actAccountSectionList));
 	}
 
 	@Then("accounts section count should be {int}")
 	public void accounts_section_count_should_be(Integer expectedSectionCount) {
 		Assert.assertTrue(accountsPage.getAccountSectionCount() == expectedSectionCount);
-
 	}
 
 }

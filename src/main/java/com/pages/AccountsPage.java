@@ -25,7 +25,7 @@ public class AccountsPage {
 
 	// page actions
 	public int getAccountSectionCount(){
-		return driver.findElements(accountSection).size()-1;
+		return driver.findElements(accountSection).size();
 	}
 
 	public List<String> getAccountsPageSectionList(){
@@ -42,5 +42,6 @@ public class AccountsPage {
 	public String getAccountsPageTitle(){
 		return driver.getTitle();
 	}
+
 
 }

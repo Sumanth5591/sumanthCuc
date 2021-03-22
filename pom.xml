@@ -95,6 +95,12 @@
 			<version>4.1.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.15</version>
+		</dependency>
+
 
 
 	</dependencies>

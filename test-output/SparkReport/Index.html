@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">SumanthSpark Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 22, 2021 12:40:15 PM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 22, 2021 05:20:02 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 22, 2021 12:40:15 PM</h3>
+<h3>Mar 22, 2021 05:20:02 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 22, 2021 12:40:59 PM</h3>
+<h3>Mar 22, 2021 05:21:06 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>2</b> features failed,
+<small data-tooltip='50%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='40%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='80%'><b>4</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='60%'><b>3</b> scenarios failed,
+<small data-tooltip='20%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +143,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>11</b> steps passed</small></div>
+<div><small data-tooltip='68%'><b>15</b> steps passed</small></div>
 <div>
 <small data-tooltip='13%'><b>3</b> steps failed,
-<b>8</b> skipped, <b data-tooltip='%'>0</b> others
+<b>4</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Account Page Feature":17.773,"Login page feature":25.705
+"Account Page Feature":23.321,"Login page feature":40.015
 };
 </script>
 <div class="row">
@@ -197,21 +197,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 2,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
-failChild: 3,
+passChild: 4,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 11,
+passGrandChild: 15,
 failGrandChild: 3,
 warningGrandChild: 0,
-skipGrandChild: 8,
+skipGrandChild: 4,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -225,6 +225,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -240,7 +241,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Account Page Feature</p>
             <p class="text-sm">
-              <span>12:40:16 PM</span> / <span>00:00:17:773</span>
+              <span>17:20:03 PM</span> / <span>00:00:23:321</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -249,9 +250,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Account Page Feature</h5>
-<span class='badge badge-success'>03.22.2021 12:40:16</span>
-<span class='badge badge-danger'>03.22.2021 12:40:34</span>
-<span class='badge badge-default'>00:00:17:773</span>
+<span class='badge badge-success'>03.22.2021 17:20:03</span>
+<span class='badge badge-danger'>03.22.2021 17:20:26</span>
+<span class='badge badge-default'>00:00:23:321</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -262,46 +263,54 @@ eventsCount: 5,
     <div class="card-header" role="tab">
       <div class="card-title">
         <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Account page title</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(io.cucumber.datatable.DataTable)">
-                <span>Given user has already logged on into system</span>
-      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>sumanth@vcnrtech.com</td><td>123456</td></tr></table>
-      </div>
+              <div class="step fail-bg" title="BEFORE">
+                <span>AppHooks.ApplicationHooks.launchBrowser()</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#SubmitLogin1"}
-  (Session info: headless chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Process unexpectedly closed with status 0
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SUMANTH-DESKTOP', ip: '192.168.2.155', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49276}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: af012ed20a3307d3ccefacfcfabea9d1
-*** Element info: {Using=id, value=SubmitLogin1}
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.pages.LoginPage.doLogin(LoginPage.java:49)
-	at stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(AccountPageSteps.java:30)
-	at ✽.user has already logged on into system(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/Accounts.feature:4)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+	at com.qa.factory.DriverFactory.init_driver(DriverFactory.java:35)
+	at AppHooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:37)
 </textarea>
       
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(io.cucumber.datatable.DataTable)">
+                <span>Given user has already logged on into system</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>sumanth@vcnrtech.com</td><td>123456</td></tr></table>
+      </div>
+      <div>Step skipped
       </div>
               </div>
               <div class="step skip-bg" title="stepdefinition.AccountPageSteps.user_is_in_account_page()">
@@ -319,15 +328,22 @@ Session ID: af012ed20a3307d3ccefacfcfabea9d1
       <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER">
+              <div class="step fail-bg" title="AFTER">
                 <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>Account_page_title_2021.03.22.12.40.24
-          <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='../embedded1.png' src="../embedded1.png">
-    
-    </div></div>
-</div>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:52)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.quitBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at AppHooks.ApplicationHooks.quitBrowser(ApplicationHooks.java:42)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -336,74 +352,32 @@ Session ID: af012ed20a3307d3ccefacfcfabea9d1
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="11"><span class="badge log fail-bg mr-2">Fail</span>Account page check sections</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Account page check sections</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
-              <div class="step fail-bg" title="stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(io.cucumber.datatable.DataTable)">
+              <div class="step pass-bg" title="stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(io.cucumber.datatable.DataTable)">
                 <span>Given user has already logged on into system</span>
       <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>sumanth@vcnrtech.com</td><td>123456</td></tr></table>
       </div>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#SubmitLogin1"}
-  (Session info: headless chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SUMANTH-DESKTOP', ip: '192.168.2.155', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f09b81beb811a9817328daa47cf4041e
-*** Element info: {Using=id, value=SubmitLogin1}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.pages.LoginPage.doLogin(LoginPage.java:49)
-	at stepdefinition.AccountPageSteps.user_has_already_logged_on_into_system(AccountPageSteps.java:30)
-	at ✽.user has already logged on into system(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/Accounts.feature:4)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.AccountPageSteps.user_is_in_account_page()">
+              <div class="step pass-bg" title="stepdefinition.AccountPageSteps.user_is_in_account_page()">
                 <span>Given user is in account page</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.AccountPageSteps.user_gets_account_section(io.cucumber.datatable.DataTable)">
+              <div class="step pass-bg" title="stepdefinition.AccountPageSteps.user_gets_account_section(io.cucumber.datatable.DataTable)">
                 <span>Then user gets account section</span>
       <div><table class='markup-table table '><tr><td>ORDER HISTORY AND DETAILS</td></tr><tr><td>MY CREDIT SLIPS</td></tr><tr><td>MY ADDRESSES</td></tr><tr><td>MY PERSONAL INFORMATION</td></tr><tr><td>MY WISHLISTS</td></tr><tr><td>Home</td></tr></table>
       </div>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.AccountPageSteps.accounts_section_count_should_be(java.lang.Integer)">
+              <div class="step pass-bg" title="stepdefinition.AccountPageSteps.accounts_section_count_should_be(java.lang.Integer)">
                 <span>And accounts section count should be 6</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>Account_page_check_sections_2021.03.22.12.40.33
-          <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='../embedded2.png' src="../embedded2.png">
-    
-    </div></div>
-</div>
       <div>
       </div>
               </div>
@@ -413,25 +387,25 @@ Session ID: f09b81beb811a9817328daa47cf4041e
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="20"
+        <li class="test-item"  status="pass" test-id="20"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Login page feature</p>
             <p class="text-sm">
-              <span>12:40:34 PM</span> / <span>00:00:25:705</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>17:20:26 PM</span> / <span>00:00:40:015</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Login page feature</h5>
-<span class='badge badge-success'>03.22.2021 12:40:34</span>
-<span class='badge badge-danger'>03.22.2021 12:40:59</span>
-<span class='badge badge-default'>00:00:25:705</span>
+<h5 class="test-status text-pass">Login page feature</h5>
+<span class='badge badge-success'>03.22.2021 17:20:26</span>
+<span class='badge badge-danger'>03.22.2021 17:21:06</span>
+<span class='badge badge-default'>00:00:40:015</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -488,13 +462,10 @@ Session ID: f09b81beb811a9817328daa47cf4041e
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="36"><span class="badge log fail-bg mr-2">Fail</span>Login with correct credentials</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
               <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_is_on_login_page()">
                 <span>Given user is on login page</span>
@@ -511,57 +482,18 @@ Session ID: f09b81beb811a9817328daa47cf4041e
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="stepdefinition.LoginPageSteps.user_clicks_on_login_button()">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_clicks_on_login_button()">
                 <span>And user clicks on Login button</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#SubmitLogin1"}
-  (Session info: headless chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SUMANTH-DESKTOP', ip: '192.168.2.155', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49360}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ab70a37df26a8a760d2ad72333c97637
-*** Element info: {Using=id, value=SubmitLogin1}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.pages.LoginPage.clickOnLogin(LoginPage.java:42)
-	at stepdefinition.LoginPageSteps.user_clicks_on_login_button(LoginPageSteps.java:56)
-	at ✽.user clicks on Login button(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/LoginPage.feature:16)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.LoginPageSteps.user_gets_the_title_of_the_homepage()">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_gets_the_title_of_the_homepage()">
                 <span>Then user gets the title of the homepage</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)">
                 <span>And page title should be "My account - My Store"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>Login_with_correct_credentials_2021.03.22.12.40.58
-          <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='../embedded3.png' src="../embedded3.png">
-    
-    </div></div>
-</div>
       <div>
       </div>
               </div>
@@ -584,7 +516,7 @@ Session ID: ab70a37df26a8a760d2ad72333c97637
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -593,12 +525,12 @@ Session ID: ab70a37df26a8a760d2ad72333c97637
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="name">java.lang.NullPointerException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
+<h4>java.lang.NullPointerException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -612,31 +544,57 @@ Session ID: ab70a37df26a8a760d2ad72333c97637
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:40:18 PM</td>
+<td>17:20:09 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='5'>Given user has already logged on into system</a>
+<a href="#" class="linked" test-id='1' id='9'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Account Page Feature.Account page title.Given user has already logged on into system</span>
+<span class="badge badge-default">Account Page Feature.Account page title.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:40:26 PM</td>
+<td>17:20:09 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Given user has already logged on into system</a>
+<a href="#" class="linked" test-id='1' id='10'>AppHooks.ApplicationHooks.quitBrowser()</a>
 <div class="">
-<span class="badge badge-default">Account Page Feature.Account page check sections.Given user has already logged on into system</span>
+<span class="badge badge-default">Account Page Feature.Account page title.AppHooks.ApplicationHooks.quitBrowser()</span>
 </div>
 </td>
 </tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.WebDriverException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.WebDriverException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:40:58 PM</td>
+<td>17:20:03 PM</td>
 <td>
-<a href="#" class="linked" test-id='20' id='42'>And user clicks on Login button</a>
+<a href="#" class="linked" test-id='1' id='4'>AppHooks.ApplicationHooks.launchBrowser()</a>
 <div class="">
-<span class="badge badge-default">Login page feature.Login with correct credentials.And user clicks on Login button</span>
+<span class="badge badge-default">Account Page Feature.Account page title.AppHooks.ApplicationHooks.launchBrowser()</span>
 </div>
 </td>
 </tr>

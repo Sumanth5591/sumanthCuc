@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CucumberPOMSeries" target="9" />
+      <module name="CucumberPOMSeries" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

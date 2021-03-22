@@ -28,9 +28,8 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+//			options.addArguments("--headless");
 			tlDriver.set(new ChromeDriver(options));
-
 		} else if (browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			tlDriver.set(new FirefoxDriver());

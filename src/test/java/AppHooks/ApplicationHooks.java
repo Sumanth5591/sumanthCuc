@@ -46,12 +46,11 @@ public class ApplicationHooks {
 	public void tearDown(Scenario scenario) {
 		if(scenario.isFailed()) {
 			//take screenshot
-			
 			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 			String screenShotName = scenario.getName().replaceAll(" ","_");
 			
 			final byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(sourcePath, "image/png", screenShotName+"_"+timeStamp); //stick it in the report			
+			scenario.attach(sourcePath, "src/image/png", screenShotName+"_"+timeStamp); //stick it in the report
 		}
 
 		

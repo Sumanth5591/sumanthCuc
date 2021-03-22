@@ -56,11 +56,10 @@ public class LoginPageSteps {
 		loginpage.clickOnLogin();
 	}
 
-	@Then("user gets the title of the accounts page")
+	@Then("user gets the title of the homepage")
 	public void user_gets_the_title_of_the_homepage() {
-		
+		title = loginpage.getLoginPageTitle();
 	}
-
 
 
 }

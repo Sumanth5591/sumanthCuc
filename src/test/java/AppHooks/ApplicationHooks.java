@@ -53,6 +53,7 @@ public class ApplicationHooks {
 			final byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(sourcePath, "image/png", screenShotName+"_"+timeStamp); //stick it in the report			
 		}
+
 		
 	}
 	

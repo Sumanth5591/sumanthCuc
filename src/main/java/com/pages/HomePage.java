@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AccountsPage {
+public class HomePage {
 
 	private WebDriver driver;
 
@@ -19,7 +19,7 @@ public class AccountsPage {
 
 	// Constructor
 
-	public AccountsPage(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}
 

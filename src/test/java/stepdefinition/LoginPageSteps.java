@@ -22,10 +22,14 @@ public class LoginPageSteps {
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		
-	    DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+	    DriverFactory.getDriver().get("http://qa.youukraft.co.in/");
+	}
+	@When("user gets to secret code page")
+	public void userGetsToSecretCodePage() throws InterruptedException {
+		loginpage.enterSecretKey();
 	}
 
-	@When("user gets the title of the page")
+	@Then("user gets the title of the page")
 	public void user_gets_the_title_of_the_page() {
 		 title = loginpage.getLoginPageTitle();
 		System.out.println(title);
@@ -36,9 +40,9 @@ public class LoginPageSteps {
 		Assert.assertTrue(title.contains(expectedTitle));
 	}
 
-	@Then("forgot your password link should be displayed")
+	@Then("login button link should be displayed")
 	public void forgot_your_password_link_should_be_displayed() {
-		Assert.assertTrue(loginpage.isForgotPwdLinkExist());
+		Assert.assertTrue(loginpage.loginButtonPresent());
 	}
 
 	@When("user enters username {string}")
@@ -62,4 +66,9 @@ public class LoginPageSteps {
 	}
 
 
+	@Given("user is on login page and click on Login button")
+	public void userIsOnLoginPageAndClickOnLoginButton() {
+		loginpage.loginButtonClick();
+
+	}
 }

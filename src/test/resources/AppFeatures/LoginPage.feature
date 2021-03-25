@@ -20,3 +20,5 @@ Feature: Login page feature
     And user clicks on Login button
     Then user gets the title of the homepage
     And page title should be "YouKraft"
+    
+

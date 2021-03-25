@@ -6,7 +6,7 @@ Feature: Login page feature
     Then user gets the title of the page
     Then page title should be "YouKraft"
 
-  Scenario: Forgot Password link
+  Scenario: Login Button is present or not
     Given user is on login page
     When user gets to secret code page
     Then login button link should be displayed
@@ -20,3 +20,5 @@ Feature: Login page feature
     And user clicks on Login button
     Then user gets the title of the homepage
     And page title should be "YouKraft"
+    
+

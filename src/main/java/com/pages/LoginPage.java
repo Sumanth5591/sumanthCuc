@@ -18,6 +18,7 @@ public class LoginPage {
 	private By loginInButton = By.cssSelector("#header-main > div.login-modal > div > button.loginBtn");
 	private By loginButtonPresent = By.id("profile_header");
 	private By submitButton = By.cssSelector("#header-main > div.loginMain-bg > div > div.content > div.signup-btnBlock > button");
+	private By signUpInButton = By.cssSelector("#header-main > div.login-modal > div > button.signupBtn");
 
 
 	// 2.Constructor of page class
@@ -80,5 +81,10 @@ public class LoginPage {
 	public void loginButtonClick() {
 		driver.findElement(loginButtonPresent).click();
 		driver.findElement(loginInButton).click();
+	}
+
+	public void signUpButtonClick() {
+		driver.findElement(loginButtonPresent).click();
+		driver.findElement(signUpInButton).click();
 	}
 }

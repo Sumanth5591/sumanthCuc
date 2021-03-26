@@ -68,3 +68,153 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.core 4 0 2021-03-25 11:08:22.102
+!MESSAGE Pulling 1 repository
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2021-03-25 11:08:22.102
+!MESSAGE Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:401)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:367)
+	at org.eclipse.egit.core.op.PullOperation$PullJob.run(PullOperation.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:502)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:271)
+	... 3 more
+
+!ENTRY org.eclipse.egit.core 4 0 2021-03-25 11:08:34.885
+!MESSAGE Pulling 1 repository
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2021-03-25 11:08:34.885
+!MESSAGE Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:401)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:367)
+	at org.eclipse.egit.core.op.PullOperation$PullJob.run(PullOperation.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:502)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:271)
+	... 3 more
+
+!ENTRY org.eclipse.egit.core 4 0 2021-03-25 11:09:51.910
+!MESSAGE Pulling 1 repository
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2021-03-25 11:09:51.910
+!MESSAGE Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:401)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:367)
+	at org.eclipse.egit.core.op.PullOperation$PullJob.run(PullOperation.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+target/classes/com/pages/LoginPage.class
+target/classes/com/qa/factory/DriverFactory.class
+target/classes/com/qa/util/ConfigReader.class
+target/classes/com/qa/util/Constants.class
+target/classes/com/qa/util/ElementUtil.class
+target/test-classes/AppFeatures/LoginPage.feature
+target/test-classes/AppHooks/ApplicationHooks.class
+target/test-classes/stepdefinition/LoginPageSteps.class
+target/test-classes/testrunners/MyTestRunner.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:502)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:271)
+	... 3 more
+
+!ENTRY org.eclipse.jface 2 0 2021-03-25 11:11:38.224
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-03-25 11:11:38.224
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.format,Format,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ae93fd4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(cucumber.eclipse.editor.formmater.pretty_formatter,Pretty format feature file,
+		Format,
+		Category(cucumber.eclipse.editor.formmtter,Formatter,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39df904f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	cucumber.eclipse.editor.featureEditorScope,,,system)

@@ -1,7 +1,8 @@
 Feature: Registration page feature
 
   Scenario: user tires registration with valid data
-    Given User as Individual customer and tires to register
+    Given user is on login page
+    When user gets to secret code page
     When User clicks on SignUp button
     And Select Individual tab on SignUp page
     And Enter the Random First Name

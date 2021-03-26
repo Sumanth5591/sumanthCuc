@@ -1,4 +1,4 @@
-package testrunners;
+package com.qa.util;
 
 import com.github.javafaker.Faker;
 
@@ -7,6 +7,8 @@ import java.util.Random;
 import static java.lang.Long.toOctalString;
 
 public class Test {
+
+    Faker faker = new Faker();
 
     public static void main(String[] args) {
         System.out.println(indPhoneNumber());

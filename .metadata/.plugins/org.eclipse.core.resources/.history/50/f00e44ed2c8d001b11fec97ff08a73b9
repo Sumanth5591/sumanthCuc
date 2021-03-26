@@ -1,0 +1,18 @@
+package stepdefinition;
+
+import com.github.javafaker.Faker;
+import com.qa.util.Test;
+
+
+
+public class RegistrationStep {
+
+
+
+    public void phoneNumber(){
+        Test.indPhoneNumber();
+    }
+
+
+
+}

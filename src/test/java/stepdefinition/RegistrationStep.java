@@ -25,18 +25,19 @@ public class RegistrationStep {
 
     @When("Enter the Random First Name")
     public void enter_the_random_first_name() {
-        registrationPage.enter_first_name();
+        registrationPage.setFirstName();
 
     }
 
     @When("Enter the Random Last Name")
     public void enter_the_random_last_name() {
+        registrationPage.setLastName();
 
     }
 
     @When("Enter the Random PhoneNumber")
     public void enter_the_random_phone_number() {
-
+        registrationPage.setphoneNumber();
     }
 
     @When("Enter the Random AadharCard")

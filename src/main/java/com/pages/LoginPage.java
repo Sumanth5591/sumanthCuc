@@ -67,14 +67,14 @@ public class LoginPage {
 		}
 	}
 
-	public HomePage doLogin(String username,String password) throws InterruptedException {
+	public void doLogin(String username,String password) throws InterruptedException {
 		System.out.println("Login with"+username+"with"+password);
 		driver.findElement(emailId).sendKeys(username);
 		driver.findElement(passwords).sendKeys(password);
 		Thread.sleep(3000);
 		driver.findElement(submitButton).click();
 		Thread.sleep(3000);
-		return new HomePage(driver);
+
 	}
 
 

@@ -1,7 +1,6 @@
 package com.pages;
 
-import com.qa.factory.DriverFactory;
-import com.qa.util.Test;
+import com.qa.util.MockLib;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +18,8 @@ public class RegistrationPage {
     private By phoneNumber = By.id("phone");
     private By emailAddress = By.id("email");
     private By password = By.id("password");
+    private By panNumber = By.id("pan");
+    private By aadhar = By.id("aadhar");
     private By confirmPassword = By.id("confirmpassword");
     private By signUpSubmit = By.cssSelector("#header-main > div.loginMain-bg > div > div.signup-btnBlock > button");
 
@@ -35,7 +36,34 @@ public class RegistrationPage {
     }
 
 
-    public void enter_first_name() {
-        Test.
+    public void setFirstName() {
+        driver.findElement(firstName).sendKeys(MockLib.firstName());
     }
+
+    public void setLastName() {
+        driver.findElement(lastName).sendKeys(MockLib.lastName());
+    }
+
+    public void setEmailAddress(){
+        driver.findElement(emailAddress).sendKeys(MockLib.emailAddress());
+    }
+
+    public void setphoneNumber(){
+        driver.findElement(phoneNumber).sendKeys(MockLib.indPhoneNumber());
+    }
+
+
+    public void setPasswords(){
+        driver.findElement(password).sendKeys(MockLib.password());
+    }
+
+    public void setConfirmPassword(){
+        driver.findElement(confirmPassword).sendKeys(MockLib.confirmPassword());
+    }
+
+    public void clickOnSubmit(){
+        driver.findElement(signUpSubmit).click();
+    }
+
+
 }

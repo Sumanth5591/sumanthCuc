@@ -24,6 +24,14 @@
 
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+	</repositories>
+
+
 	<dependencies>
 
 
@@ -107,9 +115,16 @@
 			<version>1.0.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.mifmif</groupId>
+			<artifactId>generex</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 
 
 	</dependencies>
+
+
 
 	<build>
 		<plugins>

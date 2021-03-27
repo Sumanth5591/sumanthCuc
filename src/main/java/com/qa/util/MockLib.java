@@ -1,18 +1,15 @@
 package com.qa.util;
 
 import com.github.javafaker.Faker;
-import com.mifmif.common.regex.Generex;
 
-import java.util.List;
 import java.util.Random;
-
-import static java.lang.Long.toOctalString;
 
 public class MockLib {
 
     static Faker faker = new Faker();
+    static char[] password;
+    static String str;
 
-    public static String passwords;
 
     public static void main(String[] args) {
         System.out.println(indPhoneNumber());
@@ -21,6 +18,8 @@ public class MockLib {
         System.out.println(emailAddress());
         System.out.println(aadharCard());
         System.out.println(pANCard());
+        System.out.println(setPassword(10));
+        System.out.println(setConfirmPassword());
     }
 
     public static String randomGSTNumbers(){
@@ -32,7 +31,7 @@ public class MockLib {
 
     public static String aadharCard(){
         Faker faker = new Faker();
-        String s = faker.regexify("[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}");
+        String s = faker.regexify("[0-9]{12}");
         return s;
     }
 
@@ -75,14 +74,32 @@ public class MockLib {
         return str;
     }
 
-    public static String password(){
-        passwords = faker.internet().password();
-        return passwords;
+    public static String setPassword(int length) {
+        String capitalCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+        String specialCharacters = "@$!%*?&";
+        String numbers = "1234567890";
+        String combinedChars = capitalCaseLetters + lowerCaseLetters + specialCharacters + numbers;
+        Random random = new Random();
+        password = new char[length];
+
+        password[0] = lowerCaseLetters.charAt(random.nextInt(lowerCaseLetters.length()));
+        password[1] = capitalCaseLetters.charAt(random.nextInt(capitalCaseLetters.length()));
+        password[2] = specialCharacters.charAt(random.nextInt(specialCharacters.length()));
+        password[3] = numbers.charAt(random.nextInt(numbers.length()));
+
+        for(int i = 4; i< length ; i++) {
+            password[i] = combinedChars.charAt(random.nextInt(combinedChars.length()));
+        }
+
+        str = String.valueOf(password);
+        return str;
     }
 
-    public static String confirmPassword(){
-        return passwords;
+    public  static String setConfirmPassword(){
+        return str;
     }
+
 
 
 

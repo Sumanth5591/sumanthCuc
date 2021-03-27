@@ -3,6 +3,7 @@ package stepdefinition;
 import com.pages.LoginPage;
 import com.pages.RegistrationPage;
 import com.qa.factory.DriverFactory;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -42,22 +43,23 @@ public class RegistrationStep {
 
     @When("Enter the Random AadharCard")
     public void enter_the_random_aadhar_card() {
-
+        registrationPage.setAadharNumber();
     }
 
     @When("Enter the Random PanNumber")
     public void enter_the_random_pan_number() {
-
+        registrationPage.setPanNumber();
     }
 
     @When("Enter the Random password")
     public void enter_the_random_password() {
-
+        registrationPage.setPassword();
     }
 
     @When("Enter the Random confirmPassword")
-    public void enter_the_random_confirm_password() {
-
+    public void enter_the_random_confirm_password() throws InterruptedException {
+        registrationPage.setConfirmPassword();
+        Thread.sleep(20000);
     }
 
     @Then("user clicks on submit button in registration page")
@@ -66,4 +68,14 @@ public class RegistrationStep {
     }
 
 
+    @Then("user is on login dropdown")
+    public void userIsOnLoginDropdown() {
+        registrationPage.clickOnLoginDropDown();
+    }
+
+
+    @And("Enter the randon Email Address")
+    public void enterTheRandonEmailAddress() {
+        registrationPage.setEmailAddress();
+    }
 }

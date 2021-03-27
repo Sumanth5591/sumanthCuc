@@ -53,8 +53,6 @@ public class ApplicationHooks {
 			scenario.attach(sourcePath, "src/image/png", screenShotName+"_"+timeStamp); //stick it in the report
 		}
 
-		
 	}
-	
 
 }

@@ -10,7 +10,7 @@ Feature: Checking Cash on delivery Feature
     Then user gets the title of the page
     And page title should be "YouKraft"
     And click on search
-    Then search for Item "Nice Cotton Hand Gloves-Free Size"
+    Then search for Item "Nice Cotton Hand Gloves Free Size"
     And Click on search button
     And Search for gloves and click on gloves "Nice Cotton Hand Gloves Free Size"
     And Check the price of the product
@@ -20,6 +20,7 @@ Feature: Checking Cash on delivery Feature
     And click on add to cart
     And click on go to cart
     Then Check the price and quantity in check out page
+    And Validate the total Price with QTY * price
     And click on proceed to checkout
     And click on continue
     And select payment mode as Cash on delivery

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">SumanthSpark Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 27, 2021 04:23:35 PM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 28, 2021 03:18:58 AM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 27, 2021 04:23:35 PM</h3>
+<h3>Mar 28, 2021 03:18:58 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 27, 2021 04:23:59 PM</h3>
+<h3>Mar 28, 2021 03:20:04 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -143,10 +143,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'><b>7</b> steps passed</small></div>
+<div><small data-tooltip='47%'><b>11</b> steps passed</small></div>
 <div>
-<small data-tooltip='4%'><b>1</b> steps failed,
-<b>13</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='8%'><b>2</b> steps failed,
+<b>10</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Checking Cash on delivery Feature":23.061
+"Checking Cash on delivery Feature":64.6
 };
 </script>
 <div class="row">
@@ -208,10 +208,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 7,
-failGrandChild: 1,
+passGrandChild: 11,
+failGrandChild: 2,
 warningGrandChild: 0,
-skipGrandChild: 13,
+skipGrandChild: 10,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -240,7 +240,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Checking Cash on delivery Feature</p>
             <p class="text-sm">
-              <span>16:23:36 PM</span> / <span>00:00:23:061</span>
+              <span>03:18:59 AM</span> / <span>00:01:04:600</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -249,9 +249,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Checking Cash on delivery Feature</h5>
-<span class='badge badge-success'>03.27.2021 16:23:36</span>
-<span class='badge badge-danger'>03.27.2021 16:23:59</span>
-<span class='badge badge-default'>00:00:23:061</span>
+<span class='badge badge-success'>03.28.2021 03:18:59</span>
+<span class='badge badge-danger'>03.28.2021 03:20:04</span>
+<span class='badge badge-default'>00:01:04:600</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -294,7 +294,7 @@ eventsCount: 5,
       </div>
               </div>
               <div class="step pass-bg" title="stepdefinition.CashOnDelivery.searchForItem(java.lang.String)">
-                <span>Then search for Item "Nice Cotton Hand Gloves-Free Size"</span>
+                <span>Then search for Item "Nice Cotton Hand Gloves Free Size"</span>
       <div>
       </div>
               </div>
@@ -303,54 +303,36 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="stepdefinition.CashOnDelivery.searchForGlovesAndClickOnGloves(java.lang.String)">
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.searchForGlovesAndClickOnGloves(java.lang.String)">
                 <span>And Search for gloves and click on gloves "Nice Cotton Hand Gloves Free Size"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SUMANTH-DESKTOP', ip: '192.168.1.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60933}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4631ec7da0bb1909391220d519cb904d
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-	at com.pages.CodePage.searchForItemSearched(CodePage.java:57)
-	at stepdefinition.CashOnDelivery.searchForGlovesAndClickOnGloves(CashOnDelivery.java:62)
-	at ✽.Search for gloves and click on gloves "Nice Cotton Hand Gloves Free Size"(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/COD.feature:15)
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkThePriceOfTheProduct()">
+                <span>And Check the price of the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkTheAvalabilityOfProduct()">
+                <span>And check the avalability of product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.changeThePincodeTo(java.lang.String)">
+                <span>And change the Pincode to "560064"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(int)">
+                <span>And Change the QTY to 2 by clicking on + button</span>
+      <div>
+        <textarea disabled class="code-block">java.util.NoSuchElementException: The following element was not visible: By.cssSelector: #root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > div > input
+	at com.qa.util.ElementUtil.waitForElementToBeVisible(ElementUtil.java:175)
+	at com.pages.CodePage.setQtyTwo(CodePage.java:113)
+	at stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(CashOnDelivery.java:79)
+	at ✽.Change the QTY to 2 by clicking on + button(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/COD.feature:19)
 </textarea>
       
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.checkThePriceOfTheProduct()">
-                <span>And Check the price of the product</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.checkTheAvalabilityOfProduct()">
-                <span>And check the avalability of product</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.changeThePincodeTo(java.lang.String)">
-                <span>And change the Pincode to "560064"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(int)">
-                <span>And Change the QTY to 2 by clicking on + button</span>
-      <div>Step skipped
       </div>
               </div>
               <div class="step skip-bg" title="stepdefinition.CashOnDelivery.clickOnAddToCart()">
@@ -365,6 +347,11 @@ Session ID: 4631ec7da0bb1909391220d519cb904d
               </div>
               <div class="step skip-bg" title="stepdefinition.CashOnDelivery.checkThePriceAndQuantityInCheckOutPage()">
                 <span>Then Check the price and quantity in check out page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.validateTheTotalPriceWithQTYPrice()">
+                <span>And Validate the total Price with QTY * price</span>
       <div>Step skipped
       </div>
               </div>
@@ -398,6 +385,33 @@ Session ID: 4631ec7da0bb1909391220d519cb904d
       <div>Step skipped
       </div>
               </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot activate web view
+  (Session info: chrome=89.0.4389.90)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SUMANTH-DESKTOP', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59720}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 11a2f45b6c325863b6d4dc2c322b8281
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:52)
+</textarea>
+      
+      </div>
+              </div>
           </div>
         </div>
   </div>
@@ -417,7 +431,7 @@ Session ID: 4631ec7da0bb1909391220d519cb904d
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -426,12 +440,12 @@ Session ID: 4631ec7da0bb1909391220d519cb904d
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.StaleElementReferenceException</p>
+<p class="name">java.util.NoSuchElementException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.StaleElementReferenceException</h4>
+<h4>java.util.NoSuchElementException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -445,11 +459,47 @@ Session ID: 4631ec7da0bb1909391220d519cb904d
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:23:58 PM</td>
+<td>03:19:26 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='12'>And Search for gloves and click on gloves "Nice Cotton Hand Gloves Free Size"</a>
+<a href="#" class="linked" test-id='1' id='16'>And Change the QTY to 2 by clicking on + button</a>
 <div class="">
-<span class="badge badge-default">Checking Cash on delivery Feature.Login with individual user and search for products , change qty to 2 and checkout with cash on delivery.And Search for gloves and click on gloves "Nice Cotton Hand Gloves Free Size"</span>
+<span class="badge badge-default">Checking Cash on delivery Feature.Login with individual user and search for products , change qty to 2 and checkout with cash on delivery.And Change the QTY to 2 by clicking on + button</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.WebDriverException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.WebDriverException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:19:47 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Checking Cash on delivery Feature.Login with individual user and search for products , change qty to 2 and checkout with cash on delivery.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>

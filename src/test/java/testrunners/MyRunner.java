@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/AppFeatures/COD.feature"},
 		glue = {"stepdefinition", "AppHooks"},
-		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}  //Semicolon is necessary
+		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}  //Colon is necessary
 		
 		)
 

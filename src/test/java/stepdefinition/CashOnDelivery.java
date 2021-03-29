@@ -4,7 +4,6 @@ import com.pages.CodePage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -75,13 +74,13 @@ public class CashOnDelivery {
   }
 
   @And("Change the QTY to {int} by clicking on + button")
-  public void changeTheQTYToByClickingOnButton(int increaseTo) {
+  public void changeTheQTYToByClickingOnButton(int increaseTo) throws InterruptedException {
     codePage.setQtyTwo(increaseTo);
     increaseTo1 = increaseTo;
   }
 
   @And("click on add to cart")
-  public void clickOnAddToCart() {
+  public void clickOnAddToCart() throws InterruptedException {
     codePage.addToCart();
   }
 
@@ -93,36 +92,49 @@ public class CashOnDelivery {
   @Then("Check the price and quantity in check out page")
   public void checkThePriceAndQuantityInCheckOutPage() {
     codePage.checkQtyPrice();
-    Assert.assertEquals(Integer.toString(increaseTo1).trim(), codePage.cartPageQty1.trim());
-    Assert.assertEquals(CodePage.priceOfTheProduct.trim(), codePage.cartPrice1.trim());
+    Assert.assertEquals(Integer.toString(increaseTo1).trim(), CodePage.cartPageQty1.trim());
+    Assert.assertEquals(CodePage.priceOfTheProduct.trim(), CodePage.cartPrice1.trim());
+  }
+
+  @And("Validate the total Price with QTY * price")
+  public void validateTheTotalPriceWithQTYPrice() {
+    codePage.totalPrice();
+    //    String cartPrice1 = String.format("%.2f", codePage.cartPrice1);
+    double i = Double.parseDouble(CodePage.cartPrice1) * Integer.parseInt(CodePage.cartPageQty1);
+    System.out.println(i);
+    System.out.println(CodePage.totalPrices);
+    Assert.assertEquals(i, CodePage.totalPrices, 0.001);
   }
 
   @And("click on proceed to checkout")
-  public void clickOnProceedToCheckout() {
+  public void clickOnProceedToCheckout() throws InterruptedException {
     codePage.clickOnProceed();
   }
 
   @And("click on continue")
-  public void clickOnContinue() {}
+  public void clickOnContinue() {
+    codePage.clickOnContinue();
+  }
 
   @And("select payment mode as Cash on delivery")
-  public void selectPaymentModeAsCashOnDelivery() {}
+  public void selectPaymentModeAsCashOnDelivery() {
+    codePage.selectPaymentMode();
+  }
 
   @And("place and order")
-  public void placeAndOrder() {}
+  public void placeAndOrder() {
+    codePage.placeAndOrder();
+  }
 
   @Then("confirm the text {string}")
-  public void confirmTheText(String arg0) {}
+  public void confirmTheText(String successMessage) {
+    String str = codePage.verifySuccessMessage().trim();
+    successMessage = successMessage.trim();
+    Assert.assertTrue(str.contains(successMessage));
+  }
 
   @Then("Logout of portal")
-  public void logoutOfPortal() {}
-
-  @And("Validate the total Price with QTY * price")
-  public void validateTheTotalPriceWithQTYPrice() {
-//    String cartPrice1 = String.format("%.2f", codePage.cartPrice1);
-    double i = Double.parseDouble(codePage.cartPrice1) * Integer.parseInt(codePage.cartPageQty1);
-    System.out.println(i);
-    System.out.println(codePage.totalPrices);
-    Assert.assertEquals(i,codePage.totalPrices,0.001);
+  public void logoutOfPortal() {
+    loginPage.doLogout();
   }
 }

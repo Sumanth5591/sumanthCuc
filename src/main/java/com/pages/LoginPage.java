@@ -1,13 +1,17 @@
 package com.pages;
 
 import com.qa.factory.DriverFactory;
+import com.qa.util.ElementUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.NoSuchElementException;
+
 public class LoginPage {
 
     private final WebDriver driver;
+    ElementUtil eu =  new ElementUtil();
 
     // 1. BY locators
     private final By secretCode = By.id("pwd");
@@ -18,6 +22,9 @@ public class LoginPage {
     private final By loginButtonPresent = By.id("profile_header");
     private final By submitButton = By.cssSelector("#header-main > div.loginMain-bg > div > div.content > div.signup-btnBlock > button");
     private final By signUpInButton = By.cssSelector("#header-main > div.login-modal > div > button.signupBtn");
+    private By hoverForDropdown = By.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/div[3]/div[2]/div[3]/div[1]/ul[1]/li[2]/a[1]");
+    private By logoutButton = By.xpath("//span[contains(text(),'Logout')]");
+    private By welcomeScreenElement = By.xpath("//span[contains(text(),'Welcome')]");
 
 
     // 2.Constructor of page class
@@ -34,7 +41,7 @@ public class LoginPage {
         if (secretKeyElement.isDisplayed()) {
             secretKeyElement.sendKeys("1503");
             driver.findElement(secretCodeSubmit).click();
-            Thread.sleep(5000);
+            Thread.sleep(2000);
 
 
         } else {
@@ -61,14 +68,14 @@ public class LoginPage {
     public void clickOnLogin() {
         driver.findElement(submitButton).click();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
     public void doLogin(String username, String password) throws InterruptedException {
-        System.out.println("Login with" + username + "with" + password);
+        System.out.println("Login with ---- " + username + " with ---- " + password);
         loginButtonPresent();
         loginButtonClick();
         Thread.sleep(2000);
@@ -77,7 +84,6 @@ public class LoginPage {
         Thread.sleep(2000);
         driver.findElement(submitButton).click();
         Thread.sleep(2000);
-
     }
 
 
@@ -89,5 +95,22 @@ public class LoginPage {
     public void signUpButtonClick() {
         driver.findElement(loginButtonPresent).click();
         driver.findElement(signUpInButton).click();
+    }
+
+    public void doLogout() {
+        driver.navigate().to("http://qa.youukraft.co.in/");
+        driver.navigate().refresh();
+        eu.syncWait(5000);
+        System.out.println("Logout Procedure started");
+        eu.findElementAndClick_SKIP(hoverForDropdown);
+        eu.sleep(2000);
+        eu.findElementAndClick_SKIP(logoutButton);
+        System.out.println("Successfully Logout");
+        try{
+            eu.waitUntilElementIsDisplayedOnScreen(welcomeScreenElement,5);
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+
     }
 }

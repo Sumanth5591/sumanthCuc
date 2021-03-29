@@ -7,13 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class CodePage {
 
-  private WebDriver driver;
-  ElementUtil eu = new ElementUtil();
   public static String priceOfTheProduct;
   public static String cartPagePr;
+  public static String cartPageQty1;
+  public static String cartPrice1;
+  public static Double totalPrices;
+  public static String successMessagefromPage;
   private final By usernamePresent = By.cssSelector("#profile_header > a > span.username");
   private final By searchOnHomepage = By.id("search_element");
   private final By searchButton =
@@ -27,23 +30,42 @@ public class CodePage {
       By.xpath("//*[@id='root']/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div/span[4]/span[2]");
   private final By pinCodeElement = By.id("deliverable");
   private final By increaseQty =
-      By.cssSelector(
-          "#root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > div > input");
+      By.xpath(
+          "//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[7]/div[1]/input[1]");
   private final By addToCartButton =
       By.cssSelector(
           "#root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > button.addcartBtn");
-  private By goToCartButton =
+  ElementUtil eu = new ElementUtil();
+  private final WebDriver driver;
+  private final By goToCartButton =
       By.cssSelector(
           "#root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > button.addcartBtn");
-  private By cartPrice =
+  private final By cartPrice =
       By.cssSelector(
           "#root > div > div > div.contentMain > div.cartviewMain.row > div.w-75.col-md-9.safariwidth75 > div > table > div > div > tr > td:nth-child(2) > div > div:nth-child(1)");
-  private By cartPageQty = By.xpath("//*[@id='20']");
-  public static String cartPageQty1;
-  public static String cartPrice1;
-  public static Double totalPrices;
+  private final By cartPageQty =
+      By.xpath(
+          "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/table[1]/div[1]/div[1]/tr[1]/td[3]/div[1]/div[1]/input[1]");
+  private final By cartTotalPrice =
+      By.cssSelector(
+          "#root > div > div > div.contentMain > div.cartviewMain.row > div.w-75.col-md-9.safariwidth75 > div > table > div > div > tr > td:nth-child(4)");
+  private final By deleteButtonCart =
+      By.xpath(
+          "//body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/table[1]/div[1]/div[*]/tr[1]/td[6]/span[1]");
 
-  private By cartTotalPrice = By.cssSelector("#root > div > div > div.contentMain > div.cartviewMain.row > div.w-75.col-md-9.safariwidth75 > div > table > div > div > tr > td:nth-child(4)");
+  private final By ConfirmRemoveProduct = By.xpath("//button[contains(text(),'Ok')]");
+  private final By proceedToCheckoutButton =
+      By.xpath("//button[contains(text(),'Proceed To Checkout')]");
+  private final By clickOnContinue = By.xpath("//button[contains(text(),'Continue')]");
+  private final By cashOnDeliveryButton = By.xpath("//p[contains(text(),'Cash On Delivery')]");
+  private final By getCashOnDeliveryButton =
+      By.cssSelector(
+          "div.home div.contentMain:nth-child(2) div.cartviewMain.row div.w-75.col-md-9.safariwidth75:nth-child(1) div.shippingInfo.container div.paymentBlockMain.mb-4.row:nth-child(5) div.paymentBlockMethods > div.paymentBlock.active:nth-child(2)");
+  private final By placeAndOrderButton = By.xpath("//button[contains(text(),'Place Order')]");
+  private final By alertPresent = By.xpath("//h4[contains(text(),'Alert')]");
+  private By scrollToShowMore = By.xpath("//button[contains(text(),'Show More')]");
+  private By successMessageElement =
+      By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div/div/p[1]");
 
   public CodePage(WebDriver driver) {
     this.driver = driver;
@@ -62,6 +84,7 @@ public class CodePage {
   }
 
   public void clickOnSearchButton() throws InterruptedException {
+    eu.sleep(2000);
     driver.findElement(searchOnHomepage).sendKeys(Keys.RETURN);
   }
 
@@ -69,13 +92,18 @@ public class CodePage {
     WebElement element = null;
     eu.waitForElementToBeVisible(allSearchElements, 5);
     List<WebElement> searchedElements = driver.findElements(allSearchElements);
+    if (!(driver.findElements(scrollToShowMore).size() > 0)) {
+      System.out.println("No Show More");
+    } else {
+      eu.scrollToThenClick(scrollToShowMore);
+      eu.sleep(2000);
+    }
     for (WebElement e : searchedElements) {
       String str = e.getText().trim();
       if (str.contains(searchedValue.trim())) {
         System.out.println("Search Item Found!!!!");
         e.click();
-        eu.sleep(5000);
-        eu.getCurrentURL().contains("gloves");
+        eu.sleep(2000);
         return;
       } else
         System.out.println("Item Found is not : " + searchedValue + " -- So Move to next item");
@@ -109,13 +137,36 @@ public class CodePage {
     eu.sleep(2000);
   }
 
-  public void setQtyTwo(int increaseTo) {
-    eu.waitForElementToBeVisible(increaseQty, 20);
-    String str = String.valueOf(increaseTo);
-    eu.sendKeys(increaseQty, str);
+  public void setQtyTwo(int increaseTo) throws InterruptedException {
+    boolean isPresesnt = driver.findElements(increaseQty).size() > 0;
+
+    System.out.println("Previous cart item is present -- True or false : " + isPresesnt);
+    if (isPresesnt) {
+      eu.waitForElementToBeVisible(increaseQty, 20);
+      String str = String.valueOf(increaseTo);
+      eu.sendKeys(increaseQty, str);
+    } else {
+      String currentURL = eu.getCurrentURL();
+      driver.navigate().to("http://qa.youukraft.co.in/cart.html");
+      eu.syncWait(2000);
+      boolean delPres = driver.findElements(deleteButtonCart).size() > 0;
+      if (delPres) {
+        driver.findElement(deleteButtonCart).click();
+        eu.syncWait(2000);
+        eu.click(ConfirmRemoveProduct);
+        driver.navigate().to(currentURL);
+        eu.syncWait(2000);
+        String str = String.valueOf(increaseTo);
+        eu.sendKeys(increaseQty, str);
+      } else {
+        driver.navigate().to(currentURL);
+        String str = String.valueOf(increaseTo);
+        eu.sendKeys(increaseQty, str);
+      }
+    }
   }
 
-  public void addToCart() {
+  public void addToCart() throws InterruptedException {
     eu.sleep(2000);
     eu.click(addToCartButton);
   }
@@ -126,7 +177,7 @@ public class CodePage {
   }
 
   public String checkQtyPrice() {
-    eu.sleep(5000);
+    eu.sleep(2000);
     eu.waitForElementToDisplay(cartPrice);
     eu.getCurrentURL().contains("cart");
     cartPageQty1 = driver.findElement(cartPageQty).getAttribute("value");
@@ -135,13 +186,42 @@ public class CodePage {
     return cartPageQty1 + cartPrice1;
   }
 
-  public void clickOnProceed() {
-  }
-
   public double totalPrice() {
     String str = eu.getElementText(cartTotalPrice);
-    str.replaceAll("₹", "").trim();
+    str = str.replaceAll("[₹,]", "").trim();
     totalPrices = Double.parseDouble(str);
+    System.out.println("Inside : " + totalPrices);
     return totalPrices;
+  }
+
+  public void clickOnProceed() throws InterruptedException {
+    eu.syncWait(2000);
+    eu.waitForElementToDisplay(proceedToCheckoutButton);
+    eu.click(proceedToCheckoutButton);
+    eu.syncWait(2000);
+    if (driver.findElements(alertPresent).size() > 0) {
+      System.out.println("Transcations Alert, So cannot proceed");
+    }
+  }
+
+  public void clickOnContinue() {
+    eu.sleep(2000);
+    eu.click(clickOnContinue);
+  }
+
+  public void selectPaymentMode() {
+    eu.sleep(3000);
+    eu.findElementAndClick_SKIP(getCashOnDeliveryButton);
+    eu.findElementAndClick_SKIP(cashOnDeliveryButton);
+  }
+
+  public void placeAndOrder() {
+    eu.sleep(2000);
+    eu.click(placeAndOrderButton);
+  }
+
+  public String verifySuccessMessage() {
+    successMessagefromPage = eu.getElementText(successMessageElement);
+    return successMessagefromPage;
   }
 }

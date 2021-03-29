@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">SumanthSpark Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 28, 2021 03:18:58 AM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 29, 2021 12:46:32 PM</span></a>
 </li>
 </ul>
 </div>
@@ -52,11 +52,6 @@
 <span class="ico"><i class="fa fa-list"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +61,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 28, 2021 03:18:58 AM</h3>
+<h3>Mar 29, 2021 12:46:32 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 28, 2021 03:20:04 AM</h3>
+<h3>Mar 29, 2021 12:49:49 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>3</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +95,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>3</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +118,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='100%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +138,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='47%'><b>11</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>74</b> steps passed</small></div>
 <div>
-<small data-tooltip='8%'><b>2</b> steps failed,
-<b>10</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +157,7 @@
 </div></div>
 <script>
 var timeline = {
-"Checking Cash on delivery Feature":64.6
+"Checking Cash on delivery Feature":127.175,"Login page feature":38.616,"Registration page feature":30.514
 };
 </script>
 <div class="row">
@@ -197,21 +192,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 3,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 0,
-failChild: 1,
+passChild: 6,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 11,
-failGrandChild: 2,
+passGrandChild: 74,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 10,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -225,7 +220,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -233,25 +228,25 @@ eventsCount: 5,
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Checking Cash on delivery Feature</p>
             <p class="text-sm">
-              <span>03:18:59 AM</span> / <span>00:01:04:600</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>12:46:33 PM</span> / <span>00:02:07:175</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Checking Cash on delivery Feature</h5>
-<span class='badge badge-success'>03.28.2021 03:18:59</span>
-<span class='badge badge-danger'>03.28.2021 03:20:04</span>
-<span class='badge badge-default'>00:01:04:600</span>
+<h5 class="test-status text-pass">Checking Cash on delivery Feature</h5>
+<span class='badge badge-success'>03.29.2021 12:46:33</span>
+<span class='badge badge-danger'>03.29.2021 12:48:40</span>
+<span class='badge badge-default'>00:02:07:175</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -261,10 +256,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Login with individual user and search for products , change qty to 2 and checkout with cash on delivery</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login with individual user and search for products , change qty to 2 and checkout with cash on delivery</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
               <div class="step pass-bg" title="stepdefinition.CashOnDelivery.userHasAlreadyLoggedOnIntoSystem(io.cucumber.datatable.DataTable)">
                 <span>Given user has already logged on into system</span>
@@ -323,93 +318,432 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(int)">
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(int)">
                 <span>And Change the QTY to 2 by clicking on + button</span>
       <div>
-        <textarea disabled class="code-block">java.util.NoSuchElementException: The following element was not visible: By.cssSelector: #root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > div > input
-	at com.qa.util.ElementUtil.waitForElementToBeVisible(ElementUtil.java:175)
-	at com.pages.CodePage.setQtyTwo(CodePage.java:113)
-	at stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(CashOnDelivery.java:79)
-	at ✽.Change the QTY to 2 by clicking on + button(file:///B:/LatestCucumber6WithPOM-master/src/test/resources/AppFeatures/COD.feature:19)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.clickOnAddToCart()">
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnAddToCart()">
                 <span>And click on add to cart</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.clickOnGoToCart()">
-                <span>And click on go to cart</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.checkThePriceAndQuantityInCheckOutPage()">
-                <span>Then Check the price and quantity in check out page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.validateTheTotalPriceWithQTYPrice()">
-                <span>And Validate the total Price with QTY * price</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.clickOnProceedToCheckout()">
-                <span>And click on proceed to checkout</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.clickOnContinue()">
-                <span>And click on continue</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.selectPaymentModeAsCashOnDelivery()">
-                <span>And select payment mode as Cash on delivery</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.placeAndOrder()">
-                <span>And place and order</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.confirmTheText(java.lang.String)">
-                <span>Then confirm the text "Your order is Successful"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinition.CashOnDelivery.logoutOfPortal()">
-                <span>Then Logout of portal</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step fail-bg" title="AFTER">
-                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot activate web view
-  (Session info: chrome=89.0.4389.90)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SUMANTH-DESKTOP', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Sumanth\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59720}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 11a2f45b6c325863b6d4dc2c322b8281
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:52)
-</textarea>
-      
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnGoToCart()">
+                <span>And click on go to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkThePriceAndQuantityInCheckOutPage()">
+                <span>Then Check the price and quantity in check out page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.validateTheTotalPriceWithQTYPrice()">
+                <span>And Validate the total Price with QTY * price</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnProceedToCheckout()">
+                <span>And click on proceed to checkout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnContinue()">
+                <span>And click on continue</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.selectPaymentModeAsCashOnDelivery()">
+                <span>And select payment mode as Cash on delivery</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.placeAndOrder()">
+                <span>And place and order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.confirmTheText(java.lang.String)">
+                <span>Then confirm the text "Your order is Successful"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.logoutOfPortal()">
+                <span>Then Logout of portal</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Login with individual user and search for products , change qty to 5 and checkout with cash on delivery</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.userHasAlreadyLoggedOnIntoSystem(io.cucumber.datatable.DataTable)">
+                <span>Given user has already logged on into system</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>sumanth.1.reddy@gmail.com</td><td>Login@123</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.userIsInHomePage(java.lang.String)">
+                <span>Given user is in home page " Sumanth  Reddy"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_gets_the_title_of_the_page()">
+                <span>Then user gets the title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)">
+                <span>And page title should be "YouKraft"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnSearch()">
+                <span>And click on search</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.searchForItem(java.lang.String)">
+                <span>Then search for Item "Green Panel MDF Exterior Grade 5.5 MM"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnSearchButton()">
+                <span>And Click on search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.searchForGlovesAndClickOnGloves(java.lang.String)">
+                <span>And Search for gloves and click on gloves "Green Panel MDF Exterior Grade 5.5 MM"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkThePriceOfTheProduct()">
+                <span>And Check the price of the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkTheAvalabilityOfProduct()">
+                <span>And check the avalability of product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.changeThePincodeTo(java.lang.String)">
+                <span>And change the Pincode to "560001"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.changeTheQTYToByClickingOnButton(int)">
+                <span>And Change the QTY to 5 by clicking on + button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnAddToCart()">
+                <span>And click on add to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnGoToCart()">
+                <span>And click on go to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.checkThePriceAndQuantityInCheckOutPage()">
+                <span>Then Check the price and quantity in check out page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.validateTheTotalPriceWithQTYPrice()">
+                <span>And Validate the total Price with QTY * price</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnProceedToCheckout()">
+                <span>And click on proceed to checkout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.clickOnContinue()">
+                <span>And click on continue</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.selectPaymentModeAsCashOnDelivery()">
+                <span>And select payment mode as Cash on delivery</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.placeAndOrder()">
+                <span>And place and order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.confirmTheText(java.lang.String)">
+                <span>Then confirm the text "Your order is Successful"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.logoutOfPortal()">
+                <span>Then Logout of portal</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="56"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login page feature</p>
+            <p class="text-sm">
+              <span>12:48:40 PM</span> / <span>00:00:38:616</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login page feature</h5>
+<span class='badge badge-success'>03.29.2021 12:48:40</span>
+<span class='badge badge-danger'>03.29.2021 12:49:19</span>
+<span class='badge badge-default'>00:00:38:616</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=56</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log pass-bg mr-2">Pass</span>Login page title</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.userGetsToSecretCodePage()">
+                <span>When user gets to secret code page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_gets_the_title_of_the_page()">
+                <span>Then user gets the title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)">
+                <span>Then page title should be "YouKraft"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>Login Button is present or not</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.userGetsToSecretCodePage()">
+                <span>When user gets to secret code page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.forgot_your_password_link_should_be_displayed()">
+                <span>Then login button link should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.userGetsToSecretCodePage()">
+                <span>When user gets to secret code page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.userIsOnLoginPageAndClickOnLoginButton()">
+                <span>Then user is on login page and click on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_enters_username(java.lang.String)">
+                <span>When user enters username "sumanth.1.reddy@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_enters_password(java.lang.String)">
+                <span>And user enters password "Login@123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_clicks_on_login_button()">
+                <span>And user clicks on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_gets_the_title_of_the_homepage()">
+                <span>Then user gets the title of the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)">
+                <span>And page title should be "YouKraft"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.CashOnDelivery.logoutOfPortal()">
+                <span>Then Logout of portal</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="88"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Registration page feature</p>
+            <p class="text-sm">
+              <span>12:49:19 PM</span> / <span>00:00:30:514</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Registration page feature</h5>
+<span class='badge badge-success'>03.29.2021 12:49:19</span>
+<span class='badge badge-danger'>03.29.2021 12:49:49</span>
+<span class='badge badge-default'>00:00:30:514</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=88</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>user tires registration with valid data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.LoginPageSteps.userGetsToSecretCodePage()">
+                <span>When user gets to secret code page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.userIsOnLoginDropdown()">
+                <span>Then user is on login dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.user_clicks_on_sign_up_button()">
+                <span>When User clicks on SignUp button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.select_individual_tab_on_sign_up_page()">
+                <span>And Select Individual tab on SignUp page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_first_name()">
+                <span>And Enter the Random First Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_last_name()">
+                <span>And Enter the Random Last Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enterTheRandonEmailAddress()">
+                <span>And Enter the randon Email Address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_phone_number()">
+                <span>And Enter the Random PhoneNumber</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_aadhar_card()">
+                <span>And Enter the Random AadharCard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_pan_number()">
+                <span>And Enter the Random PanNumber</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_password()">
+                <span>And Enter the Random password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.enter_the_random_confirm_password()">
+                <span>And Enter the Random confirmPassword</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinition.RegistrationStep.user_clicks_on_submit_button_in_registration_page()">
+                <span>Then user clicks on submit button in registration page</span>
+      <div>
       </div>
               </div>
           </div>
@@ -427,95 +761,7 @@ Session ID: 11a2f45b6c325863b6d4dc2c322b8281
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.util.NoSuchElementException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.util.NoSuchElementException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>03:19:26 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='16'>And Change the QTY to 2 by clicking on + button</a>
-<div class="">
-<span class="badge badge-default">Checking Cash on delivery Feature.Login with individual user and search for products , change qty to 2 and checkout with cash on delivery.And Change the QTY to 2 by clicking on + button</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.WebDriverException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.WebDriverException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>03:19:47 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='27'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Checking Cash on delivery Feature.Login with individual user and search for products , change qty to 2 and checkout with cash on delivery.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div>        </div>
+        </div>
       </div>
     </div>
   </div>

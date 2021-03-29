@@ -283,4 +283,72 @@ public class ElementUtil {
     }
     return elementList;
   }
+
+  public void findElementAndClick_SKIP(By selector) {
+    if (!(_driver.findElements(selector).isEmpty())) {
+      try {
+        _driver.findElement(selector).click();
+      } catch (NoSuchElementException e) {
+        e.printStackTrace();
+      }
+    } else if (_driver.findElements(selector).size() > 0) {
+      try {
+        _driver.findElement(selector).click();
+      } catch (NoSuchElementException e) {
+        e.printStackTrace();
+      }
+    } else {
+      System.out.println("Not found the selector with " + selector);
+    }
+  }
+
+  public void findElementAndClick_ERROR(By selector) {
+    if (!(_driver.findElements(selector).isEmpty())) {
+      try {
+        _driver.findElement(selector).click();
+      } catch (NoSuchElementException e) {
+        e.printStackTrace();
+      }
+    } else if (_driver.findElements(selector).size() > 0) {
+      _driver.findElement(selector).click();
+    } else {
+      System.out.println("Not found the selector with " + selector);
+    }
+  }
+
+  public void syncWait(int millis) {
+    synchronized (_driver) {
+      try {
+        _driver.wait(millis);
+        System.out.println(
+            "This is Synchronization Wait for MultiThread, Waiting for - " + millis + " ms");
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+
+  public void hoverAndClick(By hoverSelector,By clickSelector) {
+    actions = new Actions(_driver);
+
+
+    if (!(_driver.findElements(hoverSelector).isEmpty())) {
+      try {
+        WebElement mainMenu = _driver.findElement(hoverSelector);
+        actions.moveToElement(mainMenu);
+      } catch (NoSuchElementException e) {
+        e.printStackTrace();
+      }
+    } else if (_driver.findElements(hoverSelector).size() > 0) {
+      WebElement mainMenu = _driver.findElement(hoverSelector);
+      actions.moveToElement(mainMenu);
+    } else {
+      System.out.println("Not found the selector with " + hoverSelector);
+    }
+
+    System.out.println("Hovering over the element");
+    WebElement subMenu = _driver.findElement(clickSelector);
+    actions.moveToElement(subMenu);
+    actions.click().build().perform();
+  }
 }

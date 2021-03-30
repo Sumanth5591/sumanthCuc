@@ -67,29 +67,25 @@ public class LoginPage {
 
     public void clickOnLogin() {
         driver.findElement(submitButton).click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        eu.sleep(2000);
     }
 
     public void doLogin(String username, String password) throws InterruptedException {
         System.out.println("Login with ---- " + username + " with ---- " + password);
         loginButtonPresent();
         loginButtonClick();
-        Thread.sleep(2000);
-        driver.findElement(emailId).sendKeys(username);
-        driver.findElement(passwords).sendKeys(password);
-        Thread.sleep(2000);
-        driver.findElement(submitButton).click();
-        Thread.sleep(2000);
+        eu.sleep(2000);
+        eu.sendKeys(emailId,username);
+        eu.sendKeys(passwords,password);
+        eu.sleep(2000);
+        eu.findElementAndClick_SKIP(submitButton);
+        eu.sleep(2000);
     }
 
 
     public void loginButtonClick() {
-        driver.findElement(loginButtonPresent).click();
-        driver.findElement(loginInButton).click();
+        eu.click(loginButtonPresent);
+        eu.findElementAndClick_SKIP(loginInButton);
     }
 
     public void signUpButtonClick() {
@@ -103,7 +99,7 @@ public class LoginPage {
         eu.syncWait(5000);
         System.out.println("Logout Procedure started");
         eu.findElementAndClick_SKIP(hoverForDropdown);
-        eu.sleep(2000);
+        eu.sleep(3000);
         eu.findElementAndClick_SKIP(logoutButton);
         System.out.println("Successfully Logout");
         try{

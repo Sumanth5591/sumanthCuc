@@ -17,6 +17,7 @@ public class CodePage {
   public static String cartPrice1;
   public static Double totalPrices;
   public static String successMessagefromPage;
+  public static String avaliableQTY;
   private final By usernamePresent = By.cssSelector("#profile_header > a > span.username");
   private final By searchOnHomepage = By.id("search_element");
   private final By searchButton =
@@ -119,16 +120,17 @@ public class CodePage {
     } else return "Didn't find the price";
   }
 
-  public void isAvalability() {
+  public String isAvalability() {
 
-    String str = eu.getElementText(isAvailable);
-    int strToInt = Integer.parseInt(str);
+    avaliableQTY = eu.getElementText(isAvailable);
+    int strToInt = Integer.parseInt(avaliableQTY);
     if (strToInt > 2) {
       System.out.println("The Quantity is larger than 2, so Proceed");
     } else {
       System.out.println("Quantity is not more than 2, so logout");
       driver.quit();
     }
+    return avaliableQTY;
   }
 
   public void setPincode(String pinCode) {

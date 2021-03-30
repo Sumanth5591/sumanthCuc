@@ -9,11 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/AppFeatures"},
 		glue = {"stepdefinition", "AppHooks"},
-		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}  //Colon is necessary
+		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failedRerun.txt"}  //Colon is necessary
 		
 		)
 
 public class MyRunner {
-
 
 }

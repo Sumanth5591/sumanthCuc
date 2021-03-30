@@ -15,10 +15,22 @@ Feature: Login page feature
     Given user is on login page
     When user gets to secret code page
     Then user is on login page and click on Login button
-    When user enters username "sumanth.1.reddy@gmail.com"
+    When user enters username "sumanth.1.reddy@gmail.com.com"
     And user enters password "Login@123"
     And user clicks on Login button
+    Then user is in home page " Sumanth  Reddy"
     Then user gets the title of the homepage
     And page title should be "YouKraft"
     Then Logout of portal
 
+  Scenario: Login with correct credentials
+    Given user is on login page
+    When user gets to secret code page
+    Then user is on login page and click on Login button
+    When user enters username "sumanth.1.reddy@gmail.com"
+    And user enters password "Login@123"
+    And user clicks on Login button
+    Then user is in home page " Sumanth  Reddy"
+    Then user gets the title of the homepage
+    And page title should be "YouKraft"
+    Then Logout of portal

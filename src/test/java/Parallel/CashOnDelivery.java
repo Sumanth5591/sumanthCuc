@@ -1,4 +1,4 @@
-package stepdefinition;
+package Parallel;
 
 import com.pages.CodePage;
 import com.pages.LoginPage;
@@ -37,6 +37,7 @@ public class CashOnDelivery {
     str = codePage.isUsernamePresent().replaceAll(" ", "");
     Assert.assertTrue(str.contains(usr));
   }
+
 
   @And("click on search")
   public void clickOnSearch() {

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class CodePage {
 
@@ -36,7 +35,6 @@ public class CodePage {
   private final By addToCartButton =
       By.cssSelector(
           "#root > div > div > div.contentMain > div > div.row > div:nth-child(2) > div > div.cart-block.mb-5.d-flex.align-items-center > button.addcartBtn");
-  ElementUtil eu = new ElementUtil();
   private final WebDriver driver;
   private final By goToCartButton =
       By.cssSelector(
@@ -53,7 +51,6 @@ public class CodePage {
   private final By deleteButtonCart =
       By.xpath(
           "//body/div[@id='root']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/table[1]/div[1]/div[*]/tr[1]/td[6]/span[1]");
-
   private final By ConfirmRemoveProduct = By.xpath("//button[contains(text(),'Ok')]");
   private final By proceedToCheckoutButton =
       By.xpath("//button[contains(text(),'Proceed To Checkout')]");
@@ -64,6 +61,7 @@ public class CodePage {
           "div.home div.contentMain:nth-child(2) div.cartviewMain.row div.w-75.col-md-9.safariwidth75:nth-child(1) div.shippingInfo.container div.paymentBlockMain.mb-4.row:nth-child(5) div.paymentBlockMethods > div.paymentBlock.active:nth-child(2)");
   private final By placeAndOrderButton = By.xpath("//button[contains(text(),'Place Order')]");
   private final By alertPresent = By.xpath("//h4[contains(text(),'Alert')]");
+  ElementUtil eu = new ElementUtil();
   private By scrollToShowMore = By.xpath("//button[contains(text(),'Show More')]");
   private By successMessageElement =
       By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div/div/p[1]");
@@ -171,6 +169,7 @@ public class CodePage {
   public void addToCart() throws InterruptedException {
     eu.sleep(2000);
     eu.click(addToCartButton);
+    eu.sleep(3000);
   }
 
   public void goToCart() {
@@ -223,6 +222,7 @@ public class CodePage {
   }
 
   public String verifySuccessMessage() {
+    eu.sleep(3000);
     successMessagefromPage = eu.getElementText(successMessageElement);
     return successMessagefromPage;
   }

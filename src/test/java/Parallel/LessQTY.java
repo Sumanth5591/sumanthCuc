@@ -1,4 +1,4 @@
-package stepdefinition;
+package Parallel;
 
 import com.pages.CodePage;
 import com.pages.LessQTYPage;
@@ -36,11 +36,8 @@ public class LessQTY {
 
   @Then("Alert will pop up check the Quantity should match avaliable Quantity")
   public void alert_will_pop_up_check_the_quantity_should_match_avaliable_quantity() {
-
-    lessQTYPage.checkQTYInAlertIsSame();
-    System.out.println("Then---"+ LessQTYPage.onPageValue);
-    System.out.println("Then---" + LessQTYPage.intAvaliableQTY);
-    Assert.assertEquals(LessQTYPage.onPageValue, LessQTYPage.intAvaliableQTY);
+   lessQTYPage.checkQTYInAlertIsSame();
+    Assert.assertEquals(page,alertQty);
   }
 
   @Then("click on ok on alert")

@@ -9,7 +9,8 @@ public class LessQTYPage {
   WebDriver driver;
   CodePage codePage = new CodePage(driver);
   ElementUtil eu = new ElementUtil();
-  int intAvaliableQTY;
+  int[] ans;
+  public static int onPageValue,intAvaliableQTY;
 
   private By getPlusButton = By.xpath("//span[contains(text(),'+')]");
   private By alertMessage = By.xpath("//p[@id='text_h4']");
@@ -28,7 +29,7 @@ public class LessQTYPage {
   }
 
   public void pressButtonTimes() {
-    for (int i = 0; i < intAvaliableQTY-1; i++) {
+    for (int i = 0; i < intAvaliableQTY - 1; i++) {
       eu.click(getPlusButton);
       eu.sleep(100);
     }
@@ -39,13 +40,11 @@ public class LessQTYPage {
     eu.click(getPlusButton);
   }
 
-
-  public void checkQTYInAlertIsSame(int alertQty, int page) {
+  public void checkQTYInAlertIsSame() {
     String str = eu.getElementText(alertMessage);
-    int value = Integer.parseInt(str.replaceAll("[^0-9]", ""));
-    System.out.println(value);
-    alertQty = intAvaliableQTY;
-    page = value;
+    onPageValue = Integer.parseInt(str.replaceAll("[^0-9]", ""));
+    System.out.println(onPageValue);
+    System.out.println(intAvaliableQTY);
   }
 
   public void clickOnOkAlert() {

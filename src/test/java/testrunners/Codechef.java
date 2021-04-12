@@ -36,9 +36,7 @@ class Codechef
                 charMap.put(ch,1);
             }
         }
-
         System.out.println(charMap);
-
     }
 
 
